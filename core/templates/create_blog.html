@@ -1,0 +1,8 @@
+<form action="/create" method="post">
+	{% csrf_token %}
+
+	{{ form.as_p }}
+
+	<input type="hidden" name="blog_id" value='{{blog_id}}'>
+	<input type="submit" value="Submit" />
+</form>

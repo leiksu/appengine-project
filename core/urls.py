@@ -4,6 +4,10 @@ from core import views
 
 urlpatterns = patterns('',
     url(r'^$', views.hello_world, name='hello-world'),
+    url(r'^blog$', views.view_blog),
+    url(r'^delete/(\d+)/$',views.delete_blog),
+    url(r'^create$',views.create_blog),
+    url(r'^edit/(\d+)/$',views.create_blog),
 )
 
 if settings.DEBUG:

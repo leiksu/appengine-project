@@ -11,7 +11,7 @@ DEBUG = not APPENGINE_PRODUCTION
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+#    ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -51,15 +51,15 @@ SESSION_ENGINE = "appengine_sessions.backends.cached_db"
 #        }
 #else:
 #    # Running in development, so use a local MySQL database.
-#    DATABASES = {
-#        'default': {
-#            'ENGINE': 'django.db.backends.sqlite3',
-##            'USER': 'root',
-##            'PASSWORD': '',
-##            'HOST': 'localhost',
-#            'NAME': 'my_db',
-#            }
-#        }
+# DATABASES = {
+#              'default': {
+#                          'ENGINE': 'django.db.backends.sqlite3',
+#                          'USER': 'root',
+#                          'PASSWORD': '',
+#                          'HOST': 'localhost',
+#                          'NAME': 'my_db',
+#                          }
+#              }
 
 
 
@@ -164,7 +164,7 @@ INSTALLED_APPS = (
     'core',
     'appengine_sessions',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    #'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

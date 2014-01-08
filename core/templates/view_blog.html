@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>Blog</title></head>
+<body>
+<h1>Welcome to Leiksu's blog</h1>
+<p>Have a happy visit!</p>
+
+<br>
+{% if logout_url %}
+Welcome, {{nickname}}! <a href="{{logout_url}}">sign out</a>
+
+
+<br>
+
+<a href="create">Create</a>
+
+{% if posts %} 
+{% for post in posts %} 
+<div class="blog_post"> 
+
+<span style="font-weight: bold">{{post.blog_name}}</span> 
+<span>{{post.blog_content}} </span>
+<a href="delete/{{post.key.id}}">delete</a>
+<a href="edit/{{post.key.id}}">edit</a>
+</div> 
+
+{% endfor %} 
+{% else %} 
+
+<p>No posts.</p>
+
+{% endif %}
+
+{% else %} 
+<a href="{{login_url}}">Sign in or register</a>
+{% endif %}
+</body>
+</html>
