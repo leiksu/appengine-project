@@ -1,4 +1,3 @@
-#TODO move model content to here
 from google.appengine.ext import ndb
 
 class Blog(ndb.Model):
